@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
 import './App.css';
+import Chat from './components/Chat';
+import logoEvento from './assets/logo-evento.png';
+import removeButton from './assets/remove-button.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <div className="background"></div>
+
+      <div className="titulo">
+        <a href="#">
+          <img src={logoEvento} alt="Ícone do Evento" className="icone-evento" />
         </a>
-      </header>
+
+        <a href="#">
+          <img src={removeButton} alt="Botão de Fechar" className="botao-fechar" />
+        </a>
+
+        <h2>
+          Evento Teste - 09/04 15:30 - 16:30
+        </h2>
+
+        <hr className="custom-line" />
+
+        <Chat />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
+
